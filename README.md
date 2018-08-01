@@ -57,6 +57,16 @@ $ vagrant box add laravel/homestead
 ```
 ### Escolha o provider, que é o sistema de virtualização que você irá utilizar.
 
+```sh
+vagrant box add laravel/homestead
+==> box: Loading metadata for box 'laravel/homestead'
+    box: URL: https://vagrantcloud.com/laravel/homestead
+==> box: Adding box 'laravel/homestead' (v6.2.0) for provider: vmware_desktop
+    box: Downloading: https://vagrantcloud.com/laravel/boxes/homestead/versions/6.2.0/providers/vmware_desktop.box
+==> box: Box download is resuming from prior download progress
+==> box: Successfully added box 'laravel/homestead' (v6.2.0) for 'vmware_desktop'!
+```
+
 
 ## Contribuindo
 
