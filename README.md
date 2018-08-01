@@ -1,7 +1,7 @@
 # Tarix | Gestão Pública Inteligente
 > Sistema de Tarifação Telefônica, Gestão de Energia Elétrica e Água e Esgoto para órgãos públicos.
 
->> Requisitos
+### Tecnologias:
 - PHP 7.2.7
 - Laravel
 - Vagrant
