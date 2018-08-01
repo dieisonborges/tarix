@@ -1,7 +1,7 @@
 # Tarix | Gestão Pública Inteligente
 > Sistema de Tarifação Telefônica, Gestão de Energia Elétrica e Água e Esgoto para órgãos públicos.
 
-### Tecnologias:
+## Tecnologias:
 - PHP 7.2.7
 - Laravel
 - Vagrant
@@ -42,6 +42,20 @@ Vagrant 2.1.2
 $ vagrant -v
 Vagrant 2.1.2
 ```
+
+### Verifique se o GIT foi instaldo corretamente, bem como sua versão
+
+```sh
+$ git --version
+git version 2.17.1
+```
+
+### Baixe e instale a máquina virtual (homestead), com os recursos para Laravel, pré-configurados.
+
+```sh
+$ vagrant box add laravel/homestead
+```
+### Escolha o provider, que é o sistema de virtualização que você irá utilizar.
 
 
 ## Contribuindo
