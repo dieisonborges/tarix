@@ -86,7 +86,7 @@ Receiving objects: 100% (3010/3010), 624.04 KiB | 1.40 MiB/s, done.
 Resolving deltas: 100% (1787/1787), done.
 ```
 
-### 
+### Configurar 
 
 ```sh
 
