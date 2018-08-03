@@ -383,10 +383,10 @@ $ sudo nano /etc/hosts
 $ vagrant reload --provision
 ```
 
-### 
+### Para desligar a homestead utilize
 
 ```sh
-
+$ vagrant halt
 ```
 
 
