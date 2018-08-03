@@ -245,7 +245,116 @@ Bringing machine 'homestead-7' up with 'virtualbox' provider...
     homestead-7: /home/vagrant/Sites => /home/usuario/Sites
 ==> homestead-7: Machine already provisioned. Run `vagrant provision` or use the `--provision`
 ==> homestead-7: flag to force provisioning. Provisioners marked to run always will still run.
+```
 
+### Conectando a máquina virtual (HOMESTEAD) laravel via vagrant
+
+```sh
+$ cd ~/Homestead/
+$ vagrant ssh
+Welcome to Ubuntu 18.04 LTS (GNU/Linux 4.15.0-20-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+  System information as of Fri Aug  3 19:32:34 UTC 2018
+
+  System load:  0.08              Processes:           121
+  Usage of /:   8.2% of 61.80GB   Users logged in:     0
+  Memory usage: 19%               IP address for eth0: 10.0.2.15
+  Swap usage:   0%                IP address for eth1: 192.168.10.10
+
+ * Introducing Minimal Ubuntu for docker and clouds. 30 MB base image and
+   optimised kernels on public clouds. Made for machines and containers.
+
+   - https://bit.ly/minimal-ubuntu
+
+ * Canonical Livepatch is available for installation.
+   - Reduce system reboots and improve kernel security. Activate at:
+     https://ubuntu.com/livepatch
+
+0 packages can be updated.
+0 updates are security updates.
+
+
+Last login: Sat Jun  2 02:55:15 2018 from 10.0.2.2
+```
+
+### Verifique utilizando o composer se a Homestead realmente está instalado e configurado o LARAVEL
+
+```sh
+$ composer global require laravel/installer
+Changed current directory to /home/vagrant/.composer
+Using version ^2.0 for laravel/installer
+./composer.json has been updated
+Loading composer repositories with package information
+Updating dependencies (including require-dev)
+Nothing to install or update
+Generating autoload files
+
+```
+
+### Criando um novo projeto LARAVEL dentro da Homestead
+
+```sh
+$ cd ~/Sites/
+$ laravel new nomedoprojeto
+Crafting application...
+Loading composer repositories with package information
+Installing dependencies (including require-dev) from lock file
+Package operations: 70 installs, 0 updates, 0 removals
+  - Installing doctrine/inflector (v1.3.0): Loading from cache
+  - Installing doctrine/lexer (v1.0.1): Downloading (100%)         
+  - Installing dragonmantank/cron-expression (v2.2.0): Downloading (100%)         
+  - Installing erusev/parsedown (1.7.1): Downloading (100%)         
+  - Installing vlucas/phpdotenv (v2.5.1): Downloading (100%)  
+  .
+  .
+  .
+  - Installing myclabs/deep-copy (1.8.1): Downloading (100%)         
+  - Installing phpunit/phpunit (7.3.0): Downloading (100%)         
+symfony/routing suggests installing doctrine/annotations (For using the annotation loader)
+symfony/routing suggests installing symfony/config (For using the all-in-one router or any loader)
+symfony/routing suggests installing symfony/dependency-injection (For loading routes from a service)
+symfony/routing suggests installing symfony/expression-language (For using expression matching)
+symfony/routing suggests installing symfony/yaml (For using the YAML loader)
+symfony/event-dispatcher suggests installing symfony/dependency-injection ()
+symfony/http-kernel suggests installing symfony/browser-kit ()
+symfony/http-kernel suggests installing symfony/config ()
+symfony/http-kernel suggests installing symfony/dependency-injection ()
+symfony/console suggests installing symfony/lock ()
+.
+.
+.
+psy/psysh suggests installing ext-pdo-sqlite (The doc command requires SQLite to work.)
+psy/psysh suggests installing hoa/console (A pure PHP readline implementation. You'll want this if your PHP install doesn't already support readline or libedit.)
+filp/whoops suggests installing whoops/soap (Formats errors as SOAP responses)
+sebastian/global-state suggests installing ext-uopz (*)
+phpunit/php-code-coverage suggests installing ext-xdebug (^2.6.0)
+phpunit/phpunit suggests installing ext-xdebug (*)
+phpunit/phpunit suggests installing phpunit/php-invoker (^2.0)
+Generating optimized autoload files
+> @php -r "file_exists('.env') || copy('.env.example', '.env');"
+> @php artisan key:generate
+> Illuminate\Foundation\ComposerScripts::postAutoloadDump
+> @php artisan package:discover
+Discovered Package: fideloper/proxy
+Discovered Package: laravel/tinker
+Discovered Package: nunomaduro/collision
+Package manifest generated successfully.
+Application ready! Build something amazing.  
+```
+
+### 
+
+```sh
+
+```
+
+### 
+
+```sh
 
 ```
 
