@@ -101,18 +101,94 @@ $ nano Homestead.yaml
 ```
 
 ### Configurando as chaves SSH
+### Responda as perguntas para gerar a chave ou
+### crie um par de chaves sem frase de segurança
 
 ```sh
 $ cd ~
+dieison@chewbacca:~$ ssh-keygen -t rsa -C "seuemail@seuprovedor.com"
+Generating public/private rsa key pair.
+Enter file in which to save the key (/home/usuario/.ssh/id_rsa): 
+Enter passphrase (empty for no passphrase): 
+Enter same passphrase again: 
+Your identification has been saved in /home/usuario/.ssh/id_rsa.
+Your public key has been saved in /home/usuario/.ssh/id_rsa.pub.
+The key fingerprint is:
+SHA256:giX+kKCdv5ci7cRTOj9j/nZa+HFqEylYrSGAvKPVr10 seuemail@seuprovedor.com
+The key's randomart image is:
++---[RSA 2048]----+
+| . .             |
+|  o .            |
+|  .o...  .       |
+| o++.=. o .      |
+|.oo.=.o+So .     |
+|.  o =o.E.o      |
+|   .Bo.o..o..    |
+|  ..+=B .o++     |
+|   oo=o=o+o.     |
++----[SHA256]-----+
 
 ```
+### Modifique as linhas do Homestead.yaml para que as pastas da máquina virtual e sua máquina real estejam sincronizadas
+### Observe que map é sua máquina real e to é sua máquina virtual
 
-### Adicione as seguintes linhas no Homestead.yaml
+```sh
+nano ~/Homestead/Homestead.yaml
+```
+
+```sh
+
+folders:
+    - map: ~/Sites
+      to: /home/vagrant/Sites
+      
+```
+
+
+### Exemplo de Homestead.yaml
+
+```sh
+---
+ip: "192.168.10.10"
+memory: 2048
+cpus: 1
+provider: virtualbox
+
+authorize: ~/.ssh/id_rsa.pub
+
+keys:
+    - ~/.ssh/id_rsa
+
+folders:
+    - map: ~/Sites
+      to: /home/vagrant/Sites
+
+sites:
+    - map: homestead.test
+      to: /home/vagrant/code/public
+
+databases:
+    - homestead
+
+# blackfire:
+#     - id: foo
+#       token: bar
+#       client-id: foo
+#       client-token: bar
+
+# ports:
+#     - send: 50000
+#       to: 5000
+#     - send: 7777
+#       to: 777
+#       protocol: udp
+```
+
+### 
 
 ```sh
 
 ```
-
 
 ### 
 
