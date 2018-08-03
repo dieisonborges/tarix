@@ -119,16 +119,24 @@ The key's randomart image is:
 +---[RSA 2048]----+
 | . .             |
 |  o .            |
-|  .o...  .       |
-| o++.=. o .      |
-|.oo.=.o+So .     |
+|    .o.. .       |
+|     o. o .      |
+|   .o=.oSo .     |
 |.  o =o.E.o      |
-|   .Bo.o..o..    |
-|  ..+=B .o++     |
-|   oo=o=o+o.     |
+|     .o..o..     |
+|   .     +       |
+|    o=o=o+o.     |
 +----[SHA256]-----+
 
 ```
+### Adicione no arquivo Homestead.yaml as configurações de acesso via browser do projeto
+
+```sh
+sites:
+    - map: nomeprojeto.test
+      to: /home/vagrant/Sites/nomeprojeto/public
+```
+
 ### Modifique as linhas do Homestead.yaml para que as pastas da máquina virtual e sua máquina real estejam sincronizadas
 ### Observe que map é sua máquina real e to é sua máquina virtual
 
@@ -143,7 +151,17 @@ folders:
       to: /home/vagrant/Sites
       
 ```
+### Modifique as linhas do Homestead.yaml para configurar o nome do banco de dados
 
+    
+```sh
+nano ~/Homestead/Homestead.yaml
+```
+
+```sh
+databases:
+    - nomedobanco      
+```
 
 ### Exemplo de Homestead.yaml
 
@@ -164,11 +182,11 @@ folders:
       to: /home/vagrant/Sites
 
 sites:
-    - map: homestead.test
-      to: /home/vagrant/code/public
+    - map: nomeprojeto.test
+      to: /home/vagrant/Sites/nomeprojeto/public
 
 databases:
-    - homestead
+    - nomedobanco
 
 # blackfire:
 #     - id: foo
@@ -346,16 +364,23 @@ Package manifest generated successfully.
 Application ready! Build something amazing.  
 ```
 
-### 
+### Configure o arquivo de hosts para criar a rota via nome
+### Adicione a rota ao arquivo
 
 ```sh
-
+$ sudo nano /etc/hosts
 ```
 
-### 
 
 ```sh
+#Homestead LARAVEL
+192.168.10.10   nomeprojeto.test
+```
 
+### Reinicie o Vagrant para atulizar as configurações
+
+```sh
+$ vagrant reload --provision
 ```
 
 ### 
