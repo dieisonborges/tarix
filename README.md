@@ -86,11 +86,33 @@ Receiving objects: 100% (3010/3010), 624.04 KiB | 1.40 MiB/s, done.
 Resolving deltas: 100% (1787/1787), done.
 ```
 
-### Configurar 
+### Abra a pasta da HOMESTEAD e inicialize as configurações
+
+```sh
+$ cd Homestead
+$ ./init.sh 
+Homestead initialized!
+```
+
+### Edite o arquivo Homestead.yaml
+
+```sh
+$ nano Homestead.yaml
+```
+
+### Configurando as chaves SSH
+
+```sh
+$ cd ~
+
+```
+
+### Adicione as seguintes linhas no Homestead.yaml
 
 ```sh
 
 ```
+
 
 ### 
 
