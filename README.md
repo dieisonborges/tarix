@@ -202,7 +202,7 @@ databases:
 #       protocol: udp
 ```
 
-## 1 - Inicializando e utilizando sua Homestead Laravel
+## 2 - Inicializando e utilizando sua Homestead Laravel
 
 ### Inicialize a Homestead
 
@@ -388,7 +388,19 @@ $ vagrant reload --provision
 ```sh
 $ vagrant halt
 ```
+## 3 - Criando páginas
 
+### Para criar um controller utilizando o artisan
+
+```sh
+$ php artisan make:controller NomeController
+Controller created successfully.
+```
+
+
+
+$ php artisan migrate:install
+Migration table created successfully.
 
 ## Contribuindo
 
