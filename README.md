@@ -397,10 +397,19 @@ $ php artisan make:controller NomeController
 Controller created successfully.
 ```
 
+### Para criar um model utilizando o artisan
 
+```sh
+$ php artisan make:model Produtos --migration
+Model created successfully.
+Created Migration: 2018_08_05_035534_create_produtos_table
+```
+### Para criar executar as migrações no banco de dados utilizando o artisan
 
+```sh
 $ php artisan migrate:install
 Migration table created successfully.
+```
 
 ## Contribuindo
 
