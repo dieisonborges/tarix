@@ -455,6 +455,20 @@ Setting BUILDPACK_URL and restarting ⬢ ecardume... done, v4
 BUILDPACK_URL: https://github.com/heroku/heroku-buildpack-multi.git
 ```
 
+
+### Criar base de dados no heroku
+
+```sh
+$ heroku addons:add heroku-postgresql:hobby-dev
+ ›   Warning: heroku update available from 7.7.4 to 7.7.8
+Creating heroku-postgresql:hobby-dev on ⬢ ecardume... free
+Database has been created and is available
+ ! This database is empty. If upgrading, you can transfer
+ ! data from another database with pg:copy
+Created postgresql-curved-25981 as DATABASE_URL
+Use heroku addons:docs heroku-postgresql to view documentation
+```
+
 ## Contribuindo
 
 1. Faça o Fork (<https://github.com/dieisonborges/tarix/fork>)
