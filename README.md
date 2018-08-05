@@ -411,7 +411,7 @@ $ php artisan migrate:install
 Migration table created successfully.
 ```
 
-## 3 - Explorando o HEROKU
+## 4 - Explorando o HEROKU
 
 ### Siga os passos para utilizar o heroku e efetuar o deploy do app
 
@@ -451,7 +451,7 @@ $ heroku git:remote -a nomeprojeto
 $ heroku config:add \
 > BUILDPACK_URL=https://github.com/heroku/heroku-buildpack-multi.git
  ›   Warning: heroku update available from 7.7.4 to 7.7.8
-Setting BUILDPACK_URL and restarting ⬢ ecardume... done, v4
+Setting BUILDPACK_URL and restarting ⬢ nomeprojeto... done, v4
 BUILDPACK_URL: https://github.com/heroku/heroku-buildpack-multi.git
 ```
 
@@ -461,12 +461,27 @@ BUILDPACK_URL: https://github.com/heroku/heroku-buildpack-multi.git
 ```sh
 $ heroku addons:add heroku-postgresql:hobby-dev
  ›   Warning: heroku update available from 7.7.4 to 7.7.8
-Creating heroku-postgresql:hobby-dev on ⬢ ecardume... free
+Creating heroku-postgresql:hobby-dev on ⬢ nomeprojeto... free
 Database has been created and is available
  ! This database is empty. If upgrading, you can transfer
  ! data from another database with pg:copy
 Created postgresql-curved-25981 as DATABASE_URL
 Use heroku addons:docs heroku-postgresql to view documentation
+```
+
+### Rodar comandos artisan no heroku
+
+```sh
+$ heroku run "php artisan migrate"
+ ›   Warning: heroku update available from 7.7.4 to 7.7.8
+Running php artisan migrate on ⬢ nomeprojeto... up, run.7707 (Free)
+Migration table created successfully.
+Migrating: 2014_10_12_000000_create_users_table
+Migrated:  2014_10_12_000000_create_users_table
+Migrating: 2014_10_12_100000_create_password_resets_table
+Migrated:  2014_10_12_100000_create_password_resets_table
+Migrating: 2018_08_05_035534_create_produtos_table
+Migrated:  2018_08_05_035534_create_produtos_table
 ```
 
 ## Contribuindo
