@@ -445,6 +445,16 @@ Para repositórios existentes, basta adicionar o controle remoto heroku
 $ heroku git:remote -a nomeprojeto
 ```
 
+### Buildpack para deploy no heroku
+
+```sh
+$ heroku config:add \
+> BUILDPACK_URL=https://github.com/heroku/heroku-buildpack-multi.git
+ ›   Warning: heroku update available from 7.7.4 to 7.7.8
+Setting BUILDPACK_URL and restarting ⬢ ecardume... done, v4
+BUILDPACK_URL: https://github.com/heroku/heroku-buildpack-multi.git
+```
+
 ## Contribuindo
 
 1. Faça o Fork (<https://github.com/dieisonborges/tarix/fork>)
