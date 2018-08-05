@@ -411,6 +411,40 @@ $ php artisan migrate:install
 Migration table created successfully.
 ```
 
+## 3 - Explorando o HEROKU
+
+### Siga os passos para utilizar o heroku e efetuar o deploy do app
+
+
+Instalar o Heroku CLI
+Baixe e instale o Heroku CLI.
+
+Se você ainda não fez, faça o login na sua conta Heroku e siga as instruções para criar uma nova chave pública SSH.
+```sh
+$ heroku login
+```
+Crie um novo repositório Git
+Inicialize um repositório git em um diretório novo ou existente
+
+```sh
+$ cd my-project/
+$ git init
+$ heroku git:remote -a nomeprojeto
+```
+Implante seu aplicativo
+Confirme seu código no repositório e implemente-o no Heroku usando o Git.
+```sh
+$ git add .
+$ git commit -am "make it better"
+$ git push heroku master
+```
+Repositório Git existente
+Para repositórios existentes, basta adicionar o controle remoto heroku
+
+```sh
+$ heroku git:remote -a nomeprojeto
+```
+
 ## Contribuindo
 
 1. Faça o Fork (<https://github.com/dieisonborges/tarix/fork>)
