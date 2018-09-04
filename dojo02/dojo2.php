@@ -28,8 +28,12 @@
 		}
 
 		if($contador == 2){
-			echo 
+			echo "Numero Primo";
+		}else{
+			echo "Numero não Primo";
+	
 		}
+
 
 	?>
 </body>
