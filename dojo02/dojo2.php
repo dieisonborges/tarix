@@ -10,7 +10,9 @@
 		<input type="submit" value="calcular">
 	</form>
 	<?php
-		$numero = $_GET["numero"];
+		
+		$numero = (int)$_GET["numero"];
+
 		if(($numero % $numero) ==0){
 			$contador = 0;
 			if($numero > 1){
