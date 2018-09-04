@@ -13,7 +13,7 @@
 		
 		$numero = (int)$_GET["numero"];
 
-		if(($numero % $numero) ==0){
+		
 			$contador = 0;
 			if($numero > 1){
 				for($i=1;$i<=$numero;$i++){
@@ -21,9 +21,7 @@
 						$contador += 1;
 					}
 				}
-			}
-
-			if($contador == 2){
+						if($contador == 2){
 				echo "Numero Primo";
 			}else{
 				echo "Numero não Primo";
@@ -33,9 +31,15 @@
 				echo "Numero é Par";
 			}else{
 				echo "Numero não é Par";
+			}	
+			}else{
+				echo "Digite um número maior que 1.";
+				echo "<br>";
 			}
 
-		}
+
+
+		
 
 	?>
 </body>
