@@ -9,11 +9,28 @@
 	<title></title>
 </head>
 <body> 
-	<form >
+	<form action="#" method="GET">
 		<label>Informe um numero:</label>
 		<input type="text" name="numero" value="">
 		<input type="submit" value="calcular">
 	</form>
+	<?php
+		$numero = $_GET["numero"];
+		$contador = 0;
+		if($numero > 1){
 
+			for($i=1;$i<=$numero;$i++){
+				if($numero%$i == 0){
+					$contador += 1;
+				}
+			}
+
+		}
+
+		if($contador == 2){
+			echo 
+		}
+
+	?>
 </body>
 </html>
