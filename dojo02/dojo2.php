@@ -11,7 +11,7 @@
 	</form>
 	<?php
 		$numero = $_GET["numero"];
-		if($numero%$numero==0){
+		if(($numero % $numero) ==0){
 			$contador = 0;
 			if($numero > 1){
 				for($i=1;$i<=$numero;$i++){
@@ -26,6 +26,13 @@
 			}else{
 				echo "Numero não Primo";
 			}
+			echo "<br>";
+			if (($numero % 2) == 0) {
+				echo "Numero é Par";
+			}else{
+				echo "Numero não é Par";
+			}
+
 		}
 
 	?>
